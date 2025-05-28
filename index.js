@@ -107,7 +107,7 @@ Hello *${config.BOT_NAME}* User 👋
 ✨ Loaded with premium features and crafted for smooth automation.
 
 ╭────❍ *Details:* ❍────
-├➤ *Prefix:* \`${prefix}\`
+├
 ├➤ *Channel:* https://whatsapp.com/channel/0029VakaPzeD38CV78dbGf0e
 ├➤ *GitHub:* https://github.com/ROMEKTRICKS/ROMEK-XD
 ╰──────────────────────
