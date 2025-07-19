@@ -70,13 +70,13 @@ async function start() {
     try {
         const { state, saveCreds } = await useMultiFileAuthState(sessionDir);
         const { version, isLatest } = await fetchLatestBaileysVersion();
-        console.log(`🤖 ROMEK-XD using WA v${version.join('.')}, isLatest: ${isLatest}`);
+        console.log(`🤖 ALADDIN-MD using WA v${version.join('.')}, isLatest: ${isLatest}`);
         
         const Matrix = makeWASocket({
             version,
             logger: pino({ level: 'silent' }),
             printQRInTerminal: useQR,
-            browser: ["ROMEK-XD", "safari", "3.3"],
+            browser: ["ALADDIN-MD", "safari", "3.3"],
             auth: state,
             getMessage: async (key) => {
                 if (store) {
@@ -99,7 +99,7 @@ async function start() {
 
     Matrix.sendMessage(Matrix.user.id, {
       image: { url: "https://files.catbox.moe/l1g01a.jpg" },
-      caption: `╭───❍ *Welcome to Romek-XD* ❍───╮
+      caption: `╭───❍ *Welcome to ALADDIN-MD* ❍───╮
 
 Hello *${config.BOT_NAME}* User 👋  
 > _Simple, Sleek & Powerful WhatsApp Bot._
@@ -108,12 +108,12 @@ Hello *${config.BOT_NAME}* User 👋
 
 ╭────❍ *Details:* ❍────
 ├
-├➤ *Channel:* https://whatsapp.com/channel/0029VakaPzeD38CV78dbGf0e
-├➤ *GitHub:* https://github.com/ROMEKTRICKS/ROMEK-XD
+├➤ *Channel:* https://whatsapp.com/channel/0029Vb3FkqDJuyAAXxXE2Q3l
+├➤ *Number:* 03113921794
 ╰──────────────────────
 
-*Thanks for choosing ROMEK-XD!*  
-_©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʀᴏᴍᴇᴋ-xᴅ_`
+*Thanks for choosing Aladdin-MD!*  
+_©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ᴀʟᴀᴅᴅɪɴ-ᴍᴅ_`
             });
             initialConnection = false;
                 } else {
@@ -161,7 +161,7 @@ _©ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʀᴏᴍᴇᴋ-xᴅ_`
             await Matrix.readMessages([mek.key]);
             
             if (config.AUTO_STATUS_REPLY) {
-                const customMessage = config.STATUS_READ_MSG || '✅ Auto Status Seen Bot By ROMEK-XD';
+                const customMessage = config.STATUS_READ_MSG || '✅ Auto Status Seen Bot By ALADDIN MD';
                 await Matrix.sendMessage(fromJid, { text: customMessage }, { quoted: mek });
             }
         }
